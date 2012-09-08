@@ -4,7 +4,7 @@ class AuthController < ApplicationController
     # get your api keys at https://www.linkedin.com/secure/developer
     client = LinkedIn::Client.new(LINKEDIN_API_KEY, LINKEDIN_SECRET_KEY)
     request_token = client.request_token(:oauth_callback => 
-                                      "http://localhost:3000/auth/callback")
+                                      "http://http://shielded-caverns-6857.herokuapp.com//auth/callback")
     session[:rtoken] = request_token.token
     session[:rsecret] = request_token.secret
 
