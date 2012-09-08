@@ -1,0 +1,12 @@
+= form_for(@linkedin_profile) do |f|
+  - if @linkedin_profile.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@linkedin_profile.errors.count, "error")
+        prohibited this linkedin_profile from being saved:
+      %ul
+        - @linkedin_profile.errors.full_messages.each do |msg|
+          %li= msg
+  = f.label :name, "Name"
+  = f.text_field :name
+  = f.submit

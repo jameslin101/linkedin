@@ -56,6 +56,7 @@ GEM
     faraday (0.8.4)
       multipart-post (~> 1.1)
     haml (3.1.7)
+    hashie (1.2.0)
     hike (1.2.1)
     hpricot (0.8.6)
     i18n (0.6.1)
@@ -77,6 +78,10 @@ GEM
       less (~> 2.2.0)
     libv8 (3.3.10.4)
     libxml-ruby (2.3.3)
+    linkedin (0.3.7)
+      hashie (~> 1.2)
+      multi_json (~> 1.0)
+      oauth (~> 0.4)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -104,6 +109,7 @@ GEM
     net-http-persistent (2.7)
     nokogiri (1.5.5)
     ntlm-http (0.1.1)
+    oauth (0.4.7)
     origin (1.0.6)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
@@ -179,6 +185,7 @@ DEPENDENCIES
   jquery-ui-rails
   koala
   libxml-ruby
+  linkedin
   mechanize (= 2.4)
   mongo (= 1.6.2)
   mongoid

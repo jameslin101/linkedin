@@ -1,6 +1,6 @@
 require "open-uri"
 
-task :linked_in => [:environment] do get_linkedin_profile   end
+task :get_linked_in => [:environment],   do get_linkedin_profile   end
 
 def get_linkedin_profile(linkedin_profile, url)
   

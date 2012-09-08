@@ -22,6 +22,7 @@ gem 'jquery-rails'
 gem 'koala'
 gem 'hpricot'
 gem 'mechanize', '2.4'
+gem 'linkedin'
 
 # Gems used only for assets and not required
 # in production environments by default.
