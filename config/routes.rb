@@ -1,4 +1,6 @@
 Linkedin::Application.routes.draw do
+  devise_for :users
+
   resources :profiles
 
   match "auth" => "auth#index"
