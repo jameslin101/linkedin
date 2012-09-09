@@ -1,5 +1,5 @@
 Linkedin::Application.routes.draw do
-  resources :linkedin_profiles
+  resources :profiles
 
   match "auth" => "auth#index"
   match "auth/callback" => "auth#callback"
