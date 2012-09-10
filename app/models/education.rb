@@ -3,7 +3,7 @@ class Education
   
   embedded_in :profile
   
-  field :linkedin_id,       type: Integer
+  field :linkedinid,       type: Integer
   field :school_name,       type: String
   field :field_of_study,    type: String
   field :degree,            type: String

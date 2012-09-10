@@ -3,7 +3,7 @@ class Company
 
   belongs_to :position
 
-  field :linkedin_id,   type: Integer
+  field :linkedinid,   type: Integer
   field :industry,      type: String
   field :name,          type: String
   field :size,          type: String

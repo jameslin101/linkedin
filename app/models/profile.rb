@@ -1,11 +1,12 @@
 class Profile
   include Mongoid::Document
   
+  belongs_to :user
   embeds_many :positions, cascade_callbacks: true
   embeds_many :educations, cascade_callbacks: true
   accepts_nested_attributes_for :positions, :educations
   
-  field :linkedin_id,         type: Integer
+  field :linkedinid,         type: Integer
   field :first_name,          type: String
   field :last_name,           type: String
   field :headline,            type: String

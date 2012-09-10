@@ -45,9 +45,7 @@ class AuthController < ApplicationController
     #  client.authorize_from_access(session[:atoken], session[:asecret])
     #end
     profile = client.profile(PROFILE_FIELDS)
-    
-    @profile = Profile.find_or_create_by(linkedin_id: profile.id)
-    @profile.linkedin_id        = profile.id
+    @profile = Profile.find_or_create_by(linkedinid: profile.id)
     @profile.first_name         = profile.first_name
     @profile.last_name          = profile.last_name              
     @profile.headline,          = profile.headline            
@@ -60,7 +58,7 @@ class AuthController < ApplicationController
     @profile.email_address      = profile.email_address
     
     profile.educations.all.each do |education|
-      ed = @profile.educations.find_or_create_by(linkedin_id: education.id)
+      ed = @profile.educations.find_or_create_by(linkedinid: education.id)
       ed.field_of_study = education.field_of_study
       ed.degree         = education.degree
       ed.school_name    = education.school_names
@@ -69,13 +67,14 @@ class AuthController < ApplicationController
     end
     
     profile.positions.all.each do |position|
-      pos = @profile.positions.find_or_create_by(linkedin_id: position.id)
+      pos = @profile.positions.find_or_create_by(linkedinid: position.id)
       company         = position.company 
-      comp            = Company.find_or_create_by(linkedin_id: company.id)
+      comp            = Company.find_or_create_by(linkedinid: company.id)
       comp.industry   = company.industry
       comp.name       = company.name
       comp.size       = company.size
       comp.type       = company.type
+      pos.company     = comp
       pos.is_current  = position.is_current
       pos.summary     = position.summary
       pos.title       = position.title

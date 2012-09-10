@@ -5,7 +5,7 @@ class Position
 
   has_one :company
 
-  field :linkedin_id,       type: Integer
+  field :linkedinid,       type: Integer
   field :is_current,        type: Boolean
   field :summary,           type: String
   field :title,             type: String

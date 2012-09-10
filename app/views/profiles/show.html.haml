@@ -1,4 +1,16 @@
+=params.inspect
+%p Profile
+%br
+=@profile.inspect
+%p Positions
+-@profile.educations.each do |education|
+  =education.inspect
+%p Positions
+-@profile.positions.each do |position|
+  =position.to_json
+  =position.company.to_json
+  <br>
 %p#notice= notice
-= link_to 'Edit', editprofile_path(@profile)
+= link_to 'Edit', edit_profile_path(@profile)
 |
-\#{link_to 'Back', profiles_path}
+= link_to 'Back', profiles_path
